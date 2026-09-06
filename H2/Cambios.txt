@@ -1,0 +1,16 @@
+APLICANDO H2
++ Este segundo diagrama fue mejorado en su diseño ya que en h1 en contramos a la clase gorda en nuestro caso es PRODUCTO
+por que producto?
+Bueno producto tiene mucha responsabilidad en este sistema ya que involucra 
+				NEGOCIO + GUARDADO + PANTALLA
++ Implementamos la nueva tabla de MOVIMIENTOSTOCK para tener un registro de que usuario con el permiso de editar el stock de productos este guarde un registro conservando las buenas practicas
++ Tambien se implemento la tabla ROL por el hecho de que de momento se tiene 2 roles pero este puede ir creciendo y asignando nuevos papeles con el fin de que este sea escalable a futuro.
++ se modifico en la tabla DETALLEVENTA el stock por que no esta tarea de esta clase hacer esa accion por lo que se lo dejo en la tabla producto
++ En movimientoStock se agrego los atributos de stockAnterior, stockNuevo, Cantidad y motivo con el fin de tener un control mas exacto y evitar malas practicas ya que asi podemos tener todo de forma clara y adjuntada.
++ Antes no contábamos con la tabla ROL por lo que se la creo para poder tener diferentes roles y sea escalable pero también al hacer esto nos dimos cuenta que creamos una clase Mentirosa:
+			El simple hecho de que el administrador es el unico que puede crear mas 
+			usuarios ya lo convierte en una herencia mentirosa por el hecho de que un 
+			empleado no puede crear otro usuario
+tienen tareas que si comparten con registarVentas si tiene los permisos puede actualizar el stock puedo agregar productos por lo que tiene métodos que trabajara con un contrato mínimo del padre a las tareas que ambos pueden hacer pero a las tareas que están mas limitadas se aplicara interface como un contrato opcional.
++ Esta estructura hace lo mismo pero este es mas limpio tiene mejor organización hacelo mismo incluso es mas escalable a futuro trae buenas practicas de auditoria.
++ todo esto se logro implementando los principios SOLID.
