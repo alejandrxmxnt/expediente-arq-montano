@@ -1,0 +1,37 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="SM6Zb-_skOqg8EuI8kEr">
+    <mxGraphModel dx="1640" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Creacion de una tabla Rol&lt;/h1&gt;&lt;p&gt;Al contar con una tabla rol podemos crear diferentes modelos&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="INTERFACE&lt;div&gt;ROL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-7" edge="1" parent="1" source="Z1HPx9w8BVCpXtM7-n0l-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="Z1HPx9w8BVCpXtM7-n0l-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ADMINISTRADOR" vertex="1">
+          <mxGeometry height="60" width="120" x="220" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-8" edge="1" parent="1" source="Z1HPx9w8BVCpXtM7-n0l-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z1HPx9w8BVCpXtM7-n0l-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="VENDEDOR" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-9" edge="1" parent="1" source="Z1HPx9w8BVCpXtM7-n0l-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="Z1HPx9w8BVCpXtM7-n0l-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="NUEVO" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1HPx9w8BVCpXtM7-n0l-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;¿Que pasa si aparece un nuevo rol?&lt;br&gt;No se toca lo que ya existe ADMINISTRADOR&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;VENDEDOR&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;no se tocan, no se modifica nada&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;en NUEVO se crear el nuevo rol con las tareas que tendra acceso&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="450" x="-40" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
