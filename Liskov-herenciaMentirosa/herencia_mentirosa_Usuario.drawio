@@ -1,0 +1,130 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="miy-emoS-UdNtF59RUhq">
+    <mxGraphModel dx="813" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;HERENCIA MENTIROSA&amp;nbsp;&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px; font-weight: normal;&quot;&gt;TENEMOS LA CLASE USUARIO&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px; font-weight: normal;&quot;&gt;por el hecho de que tendremos que crear al padre a lo mas minimo por que los otros roles fuera de administrador no pueden hacer lo mismo por lo que esto genera una herencia mentirosa.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;b&gt;Contrato minimo del PADRE + INTERFAZ aparte para lo opcional&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="390" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;El simple hecho de que el administrador es el unico que puede crear mas usuarios ya lo convierte en una herencia mentirosa por el hecho de que un empleado no puede crear otro usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="330" x="50" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="USUARIO" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ADMINISTRADOR" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="EMPLEADO" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-6" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-4" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="110" />
+            </Array>
+            <mxPoint x="520" y="190" as="sourcePoint" />
+            <mxPoint x="570" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-7" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-5" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="110" />
+            </Array>
+            <mxPoint x="730" y="220" as="sourcePoint" />
+            <mxPoint x="780" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="USUARIO" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ADMINISTRADOR" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="EMPLEADO" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-11" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-9" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="360" />
+            </Array>
+            <mxPoint x="180" y="440" as="sourcePoint" />
+            <mxPoint x="230" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-12" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-10" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="360" />
+            </Array>
+            <mxPoint x="390" y="470" as="sourcePoint" />
+            <mxPoint x="440" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-22" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="CREAR USUARIO" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-21" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="EDITAR USUARIO" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-23" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ELIMINAR SUARIO" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-24" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="REGISTRAR VENTA" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-25" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ACTUALIZAR STOCK" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-26" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="AGREGAR PRODUCTO" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-27" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="MtzPYmmUlV4SUbt4Wyai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ELIMINAR PRODUCTO" vertex="1">
+          <mxGeometry height="30" width="160" x="10" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-28" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-16" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="600" as="sourcePoint" />
+            <mxPoint x="400" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-29" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-17" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="200" y="905" as="sourcePoint" />
+            <mxPoint x="430" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MtzPYmmUlV4SUbt4Wyai-30" edge="1" parent="1" source="MtzPYmmUlV4SUbt4Wyai-18" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MtzPYmmUlV4SUbt4Wyai-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="825" as="sourcePoint" />
+            <mxPoint x="570" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
