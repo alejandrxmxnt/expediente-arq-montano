@@ -277,3 +277,99 @@ class Usuario {
         }
     }
 }
+
+class DetalleVenta {
+    #idDetalleVenta;
+    #idProducto;
+    #idVenta;
+    #cantidad;
+    #precioUnitario;
+    #subtotal;
+    
+    constructor (idDetalleVenta, idProducto, cantidad, precioUnitario){
+        this.#idDetalleVenta = idDetalleVenta;
+        this.#idProducto = idProducto;
+        this.#cantidad = cantidad;
+        this.#precioUnitario = precioUnitario;
+        this.#subtotal = this.#calcularSubtotal();
+    }
+    get idDetalleVenta (){
+        return this.#idDetalleVenta;
+    }
+    get idProducto(){
+        return this.#idProducto;
+    }
+    get cantidad(){
+        return this.#cantidad;
+    }
+    get precioUnitario () {
+        return this.#precioUnitario;
+    }
+    get subtotal(){
+        return this.#subtotal;
+    }
+
+    //metodo privado solo se puede usar en esta clase
+    #calcularSubtotal(){
+        return this.#cantidad * this.#precioUnitario;
+    }
+}
+
+class Venta{
+    #idVenta;
+    #idUsuario;
+    #fechaCreacion;
+    #estado;
+    #metodoPago;
+    #total;
+    #detalle;
+
+    constructor (idVenta,idUsuario,metodoPago){
+        this.#idVenta = idVenta;
+        this.#idUsuario = idUsuario;
+        this.#metodoPago = metodoPago;
+
+        this.#estado = "Pendiente";
+        this.#fechaCreacion = new Date();
+        this.#total = 0;
+
+        this.#detalle = [];
+    }
+
+    get idVenta() {
+        return this.#idVenta;
+    }
+    get idUsuario() {
+        return this.#idUsuario;
+    }
+    get fechaCreacion() {
+        return this.#fechaCreacion;
+    }
+    get estado() {
+        return this.#estado;
+    }
+    get metodoPago() {
+        return this.#metodoPago;
+    }
+    get total() {
+        return this.#total;
+    }
+    get detalles() {
+        return [...this.#detalle];
+    }
+
+    //#######################################
+    agregarDetalle(detalle) {
+        this.#detalle.push(detalle);
+        this.#calcularTotal();
+    }
+
+    #calcularTotal() {
+        this.#total = this.#detalle.reduce((total, detalle) => total + detalle.subtotal,0);
+    }
+
+    cambiarEstado(nuevoEstado) {
+        this.#estado = nuevoEstado;
+    }
+}
+
