@@ -1,0 +1,2 @@
+Bueno en la base.js se desarrolla el sistema implementando los principios SOLID pero al no tener una base de datos creada y para poder testearla se la esta desarrollando en plano 
+Bueno se dara cuenta que escribi idCategoria cosas que no se deberia hacer por que en si se inyecta en la base de datos y ahi es auto incrmental por lo que no se hace eso pero para este caso lo estoy implementando de esta forma.
