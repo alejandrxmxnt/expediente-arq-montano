@@ -1,0 +1,3 @@
+En este momento no considero necesario aplicar Singleton, ya que el proyecto todavía no cuenta con una conexión a base de datos ni con una interfaz que lo justifique. Si más adelante se implementa una base de datos, sí reconsideraría aplicarlo, pues ahí tendría un caso de uso real (evitar múltiples conexiones innecesarias y mantener una única fuente de acceso a los datos).
+
+Además, tengo entendido que Singleton es un patrón de doble filo: puede ser muy útil en el escenario correcto, pero también tiene desventajas (como introducir estado global y dificultar las pruebas) si se aplica sin necesidad real. Es un tema que seguiré investigando a fondo antes de decidir implementarlo cuando llegue esa etapa del proyecto.
