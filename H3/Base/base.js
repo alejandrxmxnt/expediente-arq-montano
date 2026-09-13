@@ -264,6 +264,11 @@ class Usuario {
         this.#estado = !this.#estado;
     }
 
+    cambiarRol(idRol){
+        if (!idRol) throw new Error("Debe proporcionar un rol válido.");
+        this.#idRol = idRol;
+    }
+
     editarUsuario(nombre, apellido, correo) {
 
         if (nombre) {
@@ -358,7 +363,6 @@ class Venta{
         return [...this.#detalle];
     }
 
-    //#######################################
     agregarDetalle(detalle) {
         this.#detalle.push(detalle);
         this.#calcularTotal();
@@ -373,3 +377,142 @@ class Venta{
     }
 }
 
+//Creacion de SERVICIOS
+
+class CategoriaServicio {
+    constructor () {
+        this.categorias = [];
+    }
+    crearCategoria (categoria) {
+        this.categorias.push(categoria);
+        console.log(`Categoría "${categoria.nombre}" creada correctamente.`);
+    }
+    editarCategoria (idCategoria, nombre, descripcion){
+        const categoria = this.categorias.find(c => c.idCategoria === idCategoria);
+        if (!categoria) throw new Error("Categoría no encontrada.");
+        categoria.editar(nombre, descripcion);
+    }
+    buscarCategoria(idCategoria) {
+        return this.categorias.find(c => c.idCategoria === idCategoria)
+    }
+}
+
+class ProductoService {
+    constructor() { 
+        this.productos = []; 
+    }
+
+    registrarProducto(producto) {
+        this.productos.push(producto);
+        console.log(`Producto "${producto.nombre}" registrado correctamente.`);
+    }
+
+    editarProducto(idProducto, nombre, descripcion, precio) {
+        const producto = this.buscarProducto(idProducto);
+        if (!producto) throw new Error("Producto no encontrado.");
+        producto.editar(nombre, descripcion, precio);
+    }
+
+    buscarProducto(idProducto) {
+        return this.productos.find(p => p.idProducto === idProducto);
+    }
+
+    actualizarStock(idProducto, cantidad) {
+        const producto = this.buscarProducto(idProducto);
+        if (!producto) throw new Error("Producto no encontrado.");
+        producto.actualizarStock(cantidad);
+    }
+}
+
+
+class MovimientoStockService {
+    constructor(productoService) {
+        this.productoService = productoService;
+        this.movimientos = [];
+    }
+
+    registrarEntrada(idMovimiento, idProducto, idUsuario, cantidad, motivo) {
+        const producto = this.productoService.buscarProducto(idProducto);
+        if (!producto) throw new Error("Producto no encontrado.");
+
+        const stockAnterior = producto.stock;
+        producto.actualizarStock(cantidad);
+
+        const movimiento = new MovimientoStock(
+            idMovimiento, idProducto, idUsuario, cantidad,
+            stockAnterior, producto.stock, motivo
+        );
+        this.movimientos.push(movimiento);
+    }
+
+    registrarSalida(idMovimiento, idProducto, idUsuario, cantidad, motivo) {
+        const producto = this.productoService.buscarProducto(idProducto);
+        if (!producto) throw new Error("Producto no encontrado.");
+
+        const stockAnterior = producto.stock;
+        producto.actualizarStock(-cantidad);
+
+        const movimiento = new MovimientoStock(
+            idMovimiento, idProducto, idUsuario, cantidad,
+            stockAnterior, producto.stock, motivo
+        );
+        this.movimientos.push(movimiento);
+    }
+}
+
+
+class RolService {
+    constructor() { this.roles = []; }
+
+    crearRol(rol) {
+        this.roles.push(rol);
+        console.log(`Rol "${rol.nombre}" creado correctamente.`);
+    }
+}
+
+class UsuarioService {
+    constructor() { 
+        this.usuarios = []; 
+    }
+
+    crearUsuario(usuario) {
+        this.usuarios.push(usuario);
+        console.log(`Usuario "${usuario.nombre}" creado correctamente.`);
+    }
+
+    buscarUsuario(idUsuario) {
+        return this.usuarios.find(u => u.idUsuario === idUsuario);
+    }
+}
+
+class VentaService {
+    constructor(productoService) {
+        this.productoService = productoService;
+        this.ventas = [];
+    }
+
+    crearVenta(venta) {
+        this.ventas.push(venta);
+        console.log(`Venta ${venta.idVenta} creada.`);
+    }
+
+    agregarProducto(idVenta, idProducto, cantidad, idDetalle) {
+        const venta = this.ventas.find(v => v.idVenta === idVenta);
+        if (!venta) throw new Error("Venta no encontrada.");
+
+        const producto = this.productoService.buscarProducto(idProducto);
+        if (!producto) throw new Error("Producto no encontrado.");
+        if (producto.stock < cantidad) throw new Error("Stock insuficiente.");
+
+        const detalle = new DetalleVenta(idDetalle, idProducto, cantidad, producto.precio);
+        venta.agregarDetalle(detalle);
+        producto.actualizarStock(-cantidad);
+    }
+
+    finalizarVenta(idVenta) {
+        const venta = this.ventas.find(v => v.idVenta === idVenta);
+        if (!venta) throw new Error("Venta no encontrada.");
+        venta.cambiarEstado("FINALIZADA");
+        console.log(`Venta ${idVenta} finalizada. Total: ${venta.total}`);
+    }
+}
