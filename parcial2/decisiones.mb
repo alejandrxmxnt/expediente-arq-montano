@@ -1,0 +1,23 @@
+Decisiones de diseño — Biblioteca Municipal
+Primera Situación — préstamos vencidos
+Patrón: Observer
+
+El módulo de préstamos no debería tener que conocer a cada persona o sistema que necesita recibir el aviso. 
+Hoy llama directamente a correo, morosidad y recepción, y cada nuevo interesado obliga a modificarlo. 
+Con Observer, el préstamo solo avisa que venció y los interesados se pueden agregar sin cambiar el módulo. 
+No uso Strategy porque aquí no cambia una regla, sino que se avisa a varios interesados.
+
+Segunda Situación — Cálculo de la multa por retraso
+Patrón: Strategy
+
+El cálculo de la multa cambia según el tipo de socio y las reglas pueden cambiar cada año
+Actualmente está en un if/else y además está repetido en préstamos y reportes, por lo que cambiar una regla obliga a modificar varios lugares. 
+Con Strategy, cada tipo de socio tiene su propia forma de calcular la multa y se puede cambiar o agregar una regla sin modificar el módulo principal
+No es Observer porque aquí no hay que enviar avisos.
+
+Tercera Situación — Integración con el Sistema 
+Patrón: Adapter
+El sistema externo utiliza nombres, fechas y códigos diferentes a los que utiliza la biblioteca, y además no podemos modificarlo
+Si el catálogo se conecta directamente con él, nuestro código queda dependiendo de cómo funciona ese sistema
+Con Adapter, una clase intermedia traduce los datos de la biblioteca al formato que necesita el sistema externo. 
+Si el servicio cambia, principalmente se modifica el adaptador y no todo el catálogo.
