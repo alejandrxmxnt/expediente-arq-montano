@@ -1,0 +1,6 @@
+2.3 — La conexión SOLID
+
+Mi implementación de Strategy (Situación 2) aplica el **Principio Abierto/Cerrado (OCP)
+CalculadoraDeMulta no necesita ser modificada cada vez que cambia una regla, porque utiliza el contrato "IReglaDeMulta" para recibir diferentes reglas de cálculo. 
+Esto se ve en "new CalculadoraDeMulta(new ReglaMultaAdulto())", donde la regla se entrega por el constructor en lugar de decidir con un if/else" cuál usar
+Si el concejo municipal agrega un nuevo tipo de socio o cambia una tarifa, se puede crear o modificar una clase que implemente "IReglaDeMulta" sin tener que cambiar CalculadoraDeMulta ni el módulo de reportes
