@@ -1,0 +1,14 @@
+{
+  "name": "sistema-ventas-inventario",
+  "version": "1.0.0",
+  "description": "Sistema de ventas con inventario (JavaScript, consola) con los patrones Observer y Strategy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node pruebas/pruebaFlujo.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "ISC"
+}
