@@ -21,7 +21,6 @@ Entrar, salir, pagar, registrar entrada, registrar salida, ajustar tarifa, anula
 ## Diagrama
 
 ```
-mermaid
 classDiagram
     direction LR
 
