@@ -1,5 +1,6 @@
 /* 
 * refactor.cs — Cura la violación de OCP con el patrón Strategy
+* Refactor: ADRIAN ALEJANDRO MONTAÑO SOLIZ
 */
 namespace Integradora.Parqueo;
 //una interfaz para la regla de tarifa, una clase por tipo de vehículo.
