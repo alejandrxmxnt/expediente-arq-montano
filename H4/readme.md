@@ -8,17 +8,30 @@ Sistema de consola en JavaScript (Node.js) para gestionar productos, stock, vent
 
 ```mermaid
 flowchart TB
-    empleado["👤 Empleado<br>(registra ventas)"]
-    admin["👤 Administrador<br>(ajusta stock, establece los precios, cancela ventas)"]
+    subgraph actores["Usuarios"]
+        empleado["👤 Empleado<br>registra ventas"]
+        admin["👤 Administrador<br>gestiona stock y precios"]
+    end
 
-    sistema["🛒 SISTEMA DE TIENDA CON INVENTARIO Y VENTA<br>Registra ventas, cancela operaciones, controla stock, establece precios, hace los calculos, controla movimientos<br> notifica quien hizo la actualizacion de stock, avisa cuando algun producto esta por agotarse, reporte de ventas de usuarios "]
-    correo["Servicio de correo<br>En caso de agotarse el stock o se olvido la contraseña(externo)"]
+    sistema(["🛒 Sistema de tienda<br>con inventario y venta"])
 
-    empleado -->|"registra ventas"| sistema
-    admin -->|"gestiona stock, establece precios, cancela operaciones"| sistema
-    sistema -->|"genera reporte de venta, generar avisos"| correo
-    correo -->|"envia codigo en caso de perder acceso"| empleado
-    correo -->|"envia avisos de stock y codigo"| admin
+    ventas["Vende productos<br>y calcula descuentos"]
+    stock["Controla el stock<br>y sus movimientos"]
+    avisos["Avisa cuando un<br>producto está por agotarse"]
+
+    subgraph externo["Sistema externo"]
+        correo["✉️ Servicio de correo"]
+    end
+
+    empleado --> sistema
+    admin --> sistema
+
+    sistema --- ventas
+    sistema --- stock
+    sistema --- avisos
+
+    sistema -->|"pide enviar un aviso"| correo
+    correo -->|"entrega el aviso"| admin
 ```
 
 ## NIVEL 2 
